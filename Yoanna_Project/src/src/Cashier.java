@@ -2,14 +2,24 @@
 package src;
 
 public class Cashier {
-	String name; // име на касиер
-	long id_number; // идентификационен номер
+	protected static int counter; // брояч на инстанции
+	protected String name; // име на касиер
+	protected int id_number; // идентификационен номер
+
+	public Cashier() { // конструктор
+		// ...
+		counter++;
+	}
+
+	public static int getNumOfInstancesCashier() {
+		return counter;
+	}
 
 	public String getName() {
 		return this.name;
 	}
 
-	public long getID() {
+	public int getID() {
 		return this.id_number;
 	}
 
@@ -17,11 +27,11 @@ public class Cashier {
 		this.name = name;
 	}
 
-	public void setID(long id_number) {
+	public void setID(int id_number) {
 		this.id_number = id_number;
 	}
 
 	public void printDetails() {
-		System.out.print(name + " " + id_number);
+		System.out.print("Данни на касиер:" + name + " " + id_number + "\n");
 	}
 }
