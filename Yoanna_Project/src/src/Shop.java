@@ -10,8 +10,8 @@ package src;
 
 import java.util.List;
 
-public class Shop extends Goods {
-	public Shop(String goodName, int idNumber, int pricePerUnit, int goodUntill) {
+public class Shop extends Goods implements iShop {
+	public Shop(String goodName, int idNumber, int pricePerUnit, String goodUntill) {
 		super(goodName, idNumber, pricePerUnit, goodUntill);
 	}
 	private double moneyBudget =0; 
