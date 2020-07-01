@@ -3,17 +3,30 @@
 */
 package src;
 
+import java.time.LocalDate;
+import java.util.Objects;
+
 public class Goods {
-	protected String goodName; // име на стока
-	protected int idNumber;
-	protected double pricePerUnit; // единична цена на стоката
-	protected String goodUntill; // срок на годност
+    private int id;
+    private static int numberOfGoods;
+    private String goodsName;
+    private double pricePerUnit;
+    private LocalDate expirationDate;
 
-	public Goods(String goodName, int idNumber, double pricePerUnit, String goodUntill) {
-		this.goodName = goodName;
-		this.idNumber = idNumber;
-		this.pricePerUnit = pricePerUnit;
-		this.goodUntill = goodUntill;
-	}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Goods goods = (Goods) o;
+        return id == goods.id;
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    public double getPrice() {
+        return this.pricePerUnit;
+    }
 }

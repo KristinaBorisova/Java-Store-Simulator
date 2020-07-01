@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/src/CashDesk.java=UTF-8
+encoding//src/src/CashDeskThread.java=UTF-8
 encoding//src/src/Cashier.java=UTF-8
 encoding//src/src/Goods.java=UTF-8
 encoding//src/src/Main.java=UTF-8
 encoding//src/src/Shop.java=UTF-8
+encoding//src/src/threads/CashDeskThreadsDemo.java=UTF-8
+encoding//src/src/uiElements/uiMenu.java=UTF-8

@@ -6,14 +6,10 @@ package src;
 
 import java.util.List;
 
-public class CashDesk extends Cashier {
+public class CashDesk {
+    private String name;
+    private double revenue;
+    private Cashier cashier;
+    private List<Bill> bills;
 
-	private int numberOfCashDesks;
-	private List<Cashier> cashiersList;
-	private List<CashDesk> rankingList;
-	private double revenue; // оборот
-
-	public CashDesk(String name, int id_number) {
-
-	}
 }

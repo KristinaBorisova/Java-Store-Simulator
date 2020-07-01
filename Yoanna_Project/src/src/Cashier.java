@@ -1,10 +1,10 @@
 //Клас Касиер – съхранява информация за идентификационен номер и име на касиера
 package src;
-
 public class Cashier {
-	protected static int counter; // брояч на инстанции
-	protected String name; // име на касиер
-	protected int id_number; // идентификационен номер
+    private static int countCashiers;
+    private String name;
+    private int id_number;
+    private int counter;
 
 	public Cashier() { // конструктор
 		// ...
@@ -31,7 +31,7 @@ public class Cashier {
 		this.id_number = id_number;
 	}
 
-	public void printDetails() {
+	public static void printDetails() {
 		System.out.print("Данни на касиер:" + name + " " + id_number + "\n");
 	}
 }
